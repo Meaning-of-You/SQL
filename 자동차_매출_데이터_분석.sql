@@ -79,3 +79,5 @@ GROUP BY 1;
 
 SELECT A.customerNumber, A.orderDate, B.customerNumber, B.orderDate
 FROM classicmodels.orders A
+LEFT JOIN classicmodels.oreders B
+ON A.customerNumber = B.customerNumber AND substr(A.orderDate,1,4) = substr(B.orderDate,1,4) -1;
